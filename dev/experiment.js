@@ -78,6 +78,8 @@ function runExperiment(trials, subjCode, workerId, assignmentId, hitId) {
             category: category,
             expTimer: -1,
             response: -1,
+            numPics: trials.images[category].length,
+            images: trials.images[category],
             trial_number: trial_number,
             rt: -1,
         }
