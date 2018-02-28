@@ -87,7 +87,7 @@ function runExperiment(trials, subjCode, workerId, assignmentId, hitId) {
 
         let imagesHTML = '';
         for (let img of trials.images[category]) {
-            imagesHTML += `<img src="${img}" style="max-width:16%;"/>`
+            imagesHTML += `<img src="../dev/${img}" style="max-width:16%;"/>`
         }
 
         let preamble = `
@@ -144,7 +144,7 @@ function runExperiment(trials, subjCode, workerId, assignmentId, hitId) {
     window.questions = trials.questions;    // allow surveyjs to access questions
     let IRQTrial = {
         type: 'html',
-        url: "./IRQ/IRQ.html",
+        url: "../dev//IRQ/IRQ.html",
         cont_btn: "IRQ-cmplt",
         check_fn: function() {
             if(IRQIsCompleted()) {
@@ -173,7 +173,7 @@ function runExperiment(trials, subjCode, workerId, assignmentId, hitId) {
 
     let demographicsTrial = {
         type: 'html',
-        url: "./demographics/demographics.html",
+        url: "../dev//demographics/demographics.html",
         cont_btn: "demographics-cmplt",
         check_fn: function() {
             if(demographicsIsCompleted()) {
@@ -213,9 +213,9 @@ function runExperiment(trials, subjCode, workerId, assignmentId, hitId) {
 
     let images = [];
     // add scale pic paths to images that need to be loaded
-    images.push('img/scale.png');
+    images.push('../dev/img/scale.png');
     for (let i = 1; i <= 7; i++)
-        images.push('img/scale' + i + '.jpg');
+        images.push('../dev/img/scale' + i + '.jpg');
 
     jsPsych.pluginAPI.preloadImages(images, function () { startExperiment(); });
     document.timeline = timeline;

@@ -19,7 +19,7 @@ $(document).ready(function(){
         let assignmentId = 'assignmentId';
         let hitId = 'hitId';
 
-        $("#loading").html('<h2 style="text-align:center;">Loading trials... please wait.</h2> </br> <div  class="col-md-2 col-md-offset-5"><img src="img/preloader.gif"></div>')
+        $("#loading").html('<h2 style="text-align:center;">Loading trials... please wait.</h2> </br> <div  class="col-md-2 col-md-offset-5"><img src="../dev/img/preloader.gif"></div>')
         
         // This calls server to run python generate trials (judements.py) script
         // Then passes the generated trials to the experiment
@@ -37,7 +37,7 @@ $(document).ready(function(){
 
                 for (let category of categories) {
                     for (let file of stimuli[category]) {
-                        images.push(file);
+                        images.push('../dev/'+file);
                     }
                 }
                 $("#loading").remove();
