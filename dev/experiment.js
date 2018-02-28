@@ -32,7 +32,7 @@ function runExperiment(trials, subjCode, workerId, assignmentId, hitId) {
     // declare the block.
     var consent = {
         type: 'html',
-        url: "./consent.html",
+        url: "../dev/consent.html",
         cont_btn: "start",
         check_fn: check_consent
     };
