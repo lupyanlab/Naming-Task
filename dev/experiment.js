@@ -37,7 +37,7 @@ function runExperiment(trials, subjCode, workerId, assignmentId, hitId) {
         check_fn: check_consent
     };
 
-    // timeline.push(consent);
+    timeline.push(consent);
 
     let welcome_block = {
         type: "text",

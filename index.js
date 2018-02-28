@@ -29,7 +29,7 @@ app.use(function (req, res, next) {
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname + '/dev/index.html'));
 })
-app.use(express.static(__dirname + '/dev'));
+app.use(express.static(__dirname + '/'));
 
 app.listen(app.get('port'), function () {
   console.log("Node app is running at http://localhost:" + app.get('port'))
