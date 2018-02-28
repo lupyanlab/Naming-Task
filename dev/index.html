@@ -7,31 +7,31 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="jspsych-5.0.3/jspsych.js"></script>
-    <script src="jspsych-5.0.3/plugins/jspsych-button-response.js"></script>
-    <script src="jspsych-5.0.3/plugins/jspsych-html.js"></script>
-    <script src="jspsych-5.0.3/plugins/jspsych-text.js"></script>
-    <script src="jspsych-5.0.3/plugins/jspsych-text.js"></script>
-    <script src="jspsych-5.0.3/plugins/jspsych-survey-text.js"></script>
-    <script src="jspsych-5.0.3/plugins/jspsych-single-stim.js"></script>
-    <script src="jspsych-5.0.3/plugins/jspsych-instructions.js"></script>
-    <script src="jspsych-5.0.3/plugins/jspsych-multi-stim-multi-response.js"></script>
-    <script src="jspsych-5.0.3/plugins/jspsych-single-audio.js"></script>
-    <script src="jspsych-5.0.3/plugins/jspsych-categorize.js"></script>
-    <script src="jspsych-5.0.3/plugins/jspsych-multi-stim-multi-response.js"></script>
-    <script src="jspsych-5.0.3/plugins/jspsych-call-function.js"></script>
-    <script src="jspsych-5.0.3/plugins/jspsych-survey-text.js"></script>
-    <script src="jspsych-5.0.3/plugins/jspsych-survey-likert.js"></script>
+    <script src="../dev/jspsych-5.0.3/jspsych.js"></script>
+    <script src="../dev/jspsych-5.0.3/plugins/jspsych-button-response.js"></script>
+    <script src="../dev/jspsych-5.0.3/plugins/jspsych-html.js"></script>
+    <script src="../dev/jspsych-5.0.3/plugins/jspsych-text.js"></script>
+    <script src="../dev/jspsych-5.0.3/plugins/jspsych-text.js"></script>
+    <script src="../dev/jspsych-5.0.3/plugins/jspsych-survey-text.js"></script>
+    <script src="../dev/jspsych-5.0.3/plugins/jspsych-single-stim.js"></script>
+    <script src="../dev/jspsych-5.0.3/plugins/jspsych-instructions.js"></script>
+    <script src="../dev/jspsych-5.0.3/plugins/jspsych-multi-stim-multi-response.js"></script>
+    <script src="../dev/jspsych-5.0.3/plugins/jspsych-single-audio.js"></script>
+    <script src="../dev/jspsych-5.0.3/plugins/jspsych-categorize.js"></script>
+    <script src="../dev/jspsych-5.0.3/plugins/jspsych-multi-stim-multi-response.js"></script>
+    <script src="../dev/jspsych-5.0.3/plugins/jspsych-call-function.js"></script>
+    <script src="../dev/jspsych-5.0.3/plugins/jspsych-survey-text.js"></script>
+    <script src="../dev/jspsych-5.0.3/plugins/jspsych-survey-likert.js"></script>
     <script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js"></script>
-    <link href="jspsych-5.0.3/css/jspsych.css" rel="stylesheet" type="text/css"></link>
+    <link href="../dev/jspsych-5.0.3/css/jspsych.css" rel="stylesheet" type="text/css"></link>
     <script src="https://surveyjs.azureedge.net/0.12.35/survey.jquery.js"></script>
-    <script src="helpers.js"></script>
-    <script src="experiment.js"></script>
+    <script src="../dev/helpers.js"></script>
+    <script src="../dev/experiment.js"></script>
     <link rel="stylesheet" type="text/css" href="https://bootswatch.com/3/paper/bootstrap.min.css" />
     <!-- build:js -->
     <script src="dev.js"></script>
     <!-- endbuild -->
-    <link rel="stylesheet" type="text/css" href="main.css" />
+    <link rel="stylesheet" type="text/css" href="../dev/main.css" />
     <title>Categories Experiment</title>
 </head>
 <body style="position:relative;height:100%;">
@@ -40,6 +40,7 @@
     <form action="" class="form-horizontal">
         Subject Code: <input id="subjCode" type="text" name="FirstName" value="subjCode" autofocus><br>
         Number of Trials: <input id="numTrials" type="text" name="trials" value="40"> <br>
+        Number of Pictures: <input id="numPics" type="text" name="numPics" value="0"> <br>
         <label for="select" class="control-label">Start over (Reset):</label>
         <select name="new" id="reset" style="width:20%">
             <option value="false">false</option>

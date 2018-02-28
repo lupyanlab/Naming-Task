@@ -76,6 +76,7 @@ app.post('/trials', function (req, res) {
 
   let subjCode = req.body.subjCode;
   let numTrials = req.body.numTrials;
+  let numPics = req.body.numPics || 17;
   let reset = req.body.reset;
   console.log(req.body);
 
@@ -94,7 +95,7 @@ app.post('/trials', function (req, res) {
           let subjCategories = data.split('\n').filter((c) => {return !completed.includes(c)});
           let subjImages = Object.assign({}, images);
           for (let category in subjImages)
-            subjImages[category] = _.shuffle(subjImages[category]);
+            subjImages[category] = _.shuffle(subjImages[category]).slice(0, numPics);
           let questions = _.shuffle(fs.readFileSync('IRQ_questions.txt').toString().replace(/\r/g, '\n').split('\n')).filter((line) => {return line.replace(/ /g, '').length > 0 });
 
           let trials = { categories: subjCategories, images: subjImages, questions: questions };
@@ -149,7 +150,7 @@ app.post('/trials', function (req, res) {
 
     let subjImages = Object.assign({}, images);
     for (let category in subjImages)
-      subjImages[category] = _.shuffle(subjImages[category]);
+      subjImages[category] = _.shuffle(subjImages[category]).slice(0, numPics);
 
     let questions = _.shuffle(fs.readFileSync('IRQ_questions.txt').toString().replace(/\r/g, '\n').split('\n')).filter((line) => { return line.replace(/ /g, '').length > 0 });
     let trials = { categories: subjCategories, images: subjImages, questions: questions};

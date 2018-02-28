@@ -6,8 +6,8 @@ gulp.task('default', function() {
 })
 
 gulp.task('copy', function() {
-    gulp.src(['dev/**/*','!dev/index.html','!dev/dev.js', '!dev/17-objects'])
-        .pipe(gulp.dest('prod'));
+    // gulp.src(['dev/**/*','!dev/index.html','!dev/dev.js', '!dev/17-objects'])
+    //     .pipe(gulp.dest('prod'));
 })
 
 gulp.task('switchjs', function() {

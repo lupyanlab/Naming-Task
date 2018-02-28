@@ -144,7 +144,7 @@ function runExperiment(trials, subjCode, workerId, assignmentId, hitId) {
     window.questions = trials.questions;    // allow surveyjs to access questions
     let IRQTrial = {
         type: 'html',
-        url: "../dev//IRQ/IRQ.html",
+        url: "../dev/IRQ/IRQ.html",
         cont_btn: "IRQ-cmplt",
         check_fn: function() {
             if(IRQIsCompleted()) {
